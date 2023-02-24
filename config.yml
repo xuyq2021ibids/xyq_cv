@@ -56,7 +56,8 @@ params:
     
     socialIcons:
         - name: buymeacoffee
-          url: "https://www.buymeacoffee.com/xuyq"
+          url: "https://ko-fi.com/yuquan"
+          # url: "https://www.buymeacoffee.com/xuyq"
         # - name: googlescholar
         #   url: "https://ko-fi.com/heycharlola"
         - name: github
