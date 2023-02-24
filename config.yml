@@ -1,0 +1,102 @@
+baseURL: # if your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
+title: Yuquan
+paginate: 5
+theme: charlolamode
+
+menu:
+    main:
+        - name: RESEARCH
+          url: pubs/
+          weight: 1
+        - name: ABOUT
+          url: about/
+          weight: 10
+        # - name: POEMS
+        #   url: poems/
+        #   weight: 20
+        # - name: ABOUT
+        #   url: test1
+        #   weight: 20
+        # - name: ABOUT
+        #   url: test1
+        #   weight: 20
+        # - name: Categories
+        #   url: categories/
+        #   weight: 10
+        # - name: new Tab
+        #   url: mewtab/
+        #   weight: defines order of tabs
+
+params:
+    author: Yuquan
+    defaultTheme: light
+    disableThemeToggle: true
+    ShowShareButtons: false
+    ShowReadingTime: false
+    displayFullLangName: false
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    ShowToc: false
+
+    profileMode:
+        enabled: true
+        title: Yuquan Xu
+        subtitle: "__Data Scientist | Ph.D. in Management Science and Engineering__"
+        imageUrl: "/images/xyq_logo.jpg"
+        imageTitle: 
+        imageWidth: 250
+        imageHeight: 250
+        buttons:
+            # - name: Don't click me
+            #   url: https://www.bilibili.com/video/BV1j4411W7F7
+            - name: Don't click me
+              url: https://www.bilibili.com/video/BV1bW411n7fY/?t=26
+            # - name: nihao
+            #   url: https://www.bilibili.com/video/BV1j4411W7F7
+    mainSections:
+      - articles
+
+    socialIcons:
+        - name: buymeacoffee
+          url: "https://ko-fi.com/heycharlola"
+        - name: googlescholar
+          url: "https://ko-fi.com/heycharlola"
+        - name: github
+          url: "https://github.com/charlola"
+        - name: linkedin
+          url: "https://www.linkedin.com/in/heycharlola/"
+        - name: stackoverflow
+          url: "https://ko-fi.com/heycharlola"
+        - name: cv
+          url: "https://ko-fi.com/heycharlola"
+      # add more social icons. find more in svg.html file
+      # - name: youtube
+      #   url: yoururl
+      # - name: twitter
+      #   url: yoururl
+      # - name: facebook
+      #   url: yoururl
+
+
+    # change favicon in images folder (icon for web tab)
+    assets:
+          favicon: "/images/favicon.ico"
+          favicon16x16: "/images/favicon-16x16.png"
+          favicon32x32: "/images/favicon-32x32.png"
+          apple_touch_icon: "/images/apple-touch-icon.png"
+          safari_pinned_tab: "/images/apple-touch-icon.png"
+
+
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+enableEmoji: true
+pygmentsUseClasses: true
+disableKinds: 
+  - taxonomy
+  - taxonomyTerm
+
+minify:
+    disableXML: true
+    
+
