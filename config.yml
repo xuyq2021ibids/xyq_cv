@@ -6,10 +6,10 @@ theme: charlolamode
 menu:
     main:
         - name: RESEARCH
-          url: pubs/
+          url: /pubs/
           weight: 1
         - name: ABOUT
-          url: about/
+          url: /about/
           weight: 10
         # - name: POEMS
         #   url: poems/
