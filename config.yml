@@ -64,7 +64,7 @@ params:
         # - name: linkedin
         #   url: "https://www.linkedin.cn/incareer/in/ACoAABGR27ABPsE7MsKA3KK1ilztK4fTaloBr28"
         # - name: stackoverflow
-        #   url: "https://ko-fi.com/heycharlola"
+        #   url: "https://stackoverflow.com/users/6137782"
         - name: cv
           url: "https://yuquan.netlify.app"
       # add more social icons. find more in svg.html file
