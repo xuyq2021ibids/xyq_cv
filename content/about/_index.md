@@ -4,8 +4,6 @@
 
 Hi, I'm Yuquan. Welcome to my personal website!
 
-I'm a Researcher with a Ph.D. in Management Science and Engineering.
-
 I like fitness, programming, and graphic design among other things.
 
 In December 2022, I got my Ph.D. degree from **Xi'an Jiaotong University** (**Schoole of Management**), under the supervision of **[Wei Huang](https://www.sustech.edu.cn/zh/faculties/weihuangwayne.html)** and **[Yuewen Liu](http://ibids.cn)**. My research interest is mainly at the intersection of applied machine learning and business analytics/intelligence, including urban computing, spatiotemporal data analysis, social network analytics, and empirical analyses. My work uses cross-discipline methods, such as data science, deep learning, machine learning, complex network analysis, and data visualization, to explore interesting business phenomenons.
