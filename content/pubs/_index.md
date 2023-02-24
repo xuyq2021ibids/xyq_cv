@@ -6,11 +6,11 @@
 
 1. Hengyu Zhang, Yuewen Liu, **Yuquan Xu**, Min Liu, Ping An. 2023. An improved convolutional network capturing spatial heterogeneity and correlation for crowd flow prediction. **Expert Systems With Applications** (forthcoming).
 
-2. **Yuquan Xu**, Yuewen Liu*, Xiangyu Chang, Wei Huang. 2021. How does air pollution affect travel behavior? A big data field study. _**Transportation Research Part D: Transport and Environment**, 99_, 103007. (AJG 3, SSCI, JCR Q1, IF:7.04)
+2. **Yuquan Xu**, Yuewen Liu*, Xiangyu Chang, Wei Huang. 2021. How does air pollution affect travel behavior? A big data field study. **Transportation Research Part D: Transport and Environment**, 99, 103007. (AJG 3, SSCI, JCR Q1, IF:7.04)
 
- 3. **Yuquan Xu**, Xiaobin Ran, Yuewen Liu*, Wei Huang. 2021. Comparing differences in the spatiotemporal patterns between resident tourists and non-resident tourists using hotel check-in registers. _**Tourism Management Perspectives**, 39_, 100860.  (AJG 2, SSCI, JCR Q1, IF:7.61)
+ 3. **Yuquan Xu**, Xiaobin Ran, Yuewen Liu*, Wei Huang. 2021. Comparing differences in the spatiotemporal patterns between resident tourists and non-resident tourists using hotel check-in registers. **Tourism Management Perspectives**, 39, 100860.  (AJG 2, SSCI, JCR Q1, IF:7.61)
 
- 4. Xiaobin Ran, **Yuquan Xu**, Yuewen Liu*, Jinhu Jiang. 2021. Examining online social behavior changes after migration: An empirical study based on OSN big data. _**Computers in Human Behavior**, 129_, 107158. (AJG 3, SSCI, JCR Q1, IF:8.96)
+ 4. Xiaobin Ran, **Yuquan Xu**, Yuewen Liu*, Jinhu Jiang. 2021. Examining online social behavior changes after migration: An empirical study based on OSN big data. ***Computers in Human Behavior***, 129, 107158. (AJG 3, SSCI, JCR Q1, IF:8.96)
  
  
 
