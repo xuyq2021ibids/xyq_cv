@@ -51,24 +51,22 @@ params:
             #   url: https://www.bilibili.com/video/BV1j4411W7F7
             - name: Don't click me
               url: https://www.bilibili.com/video/BV1bW411n7fY/?t=26
-            # - name: nihao
-            #   url: https://www.bilibili.com/video/BV1j4411W7F7
     mainSections:
       - articles
-
+    
     socialIcons:
         - name: buymeacoffee
-          url: "https://ko-fi.com/heycharlola"
-        - name: googlescholar
-          url: "https://ko-fi.com/heycharlola"
+          url: "https://www.buymeacoffee.com/xuyq"
+        # - name: googlescholar
+        #   url: "https://ko-fi.com/heycharlola"
         - name: github
-          url: "https://github.com/charlola"
-        - name: linkedin
-          url: "https://www.linkedin.com/in/heycharlola/"
-        - name: stackoverflow
-          url: "https://ko-fi.com/heycharlola"
+          url: "https://github.com/xuyq2021ibids"
+        # - name: linkedin
+        #   url: "https://www.linkedin.cn/incareer/in/ACoAABGR27ABPsE7MsKA3KK1ilztK4fTaloBr28"
+        # - name: stackoverflow
+        #   url: "https://ko-fi.com/heycharlola"
         - name: cv
-          url: "https://ko-fi.com/heycharlola"
+          url: "https://yuquan.netlify.app"
       # add more social icons. find more in svg.html file
       # - name: youtube
       #   url: yoururl
