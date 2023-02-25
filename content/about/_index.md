@@ -6,16 +6,23 @@ Hi, I'm Yuquan. Welcome to my personal website!
 
 I like fitness, programming, and graphic design among other things.
 
-In December 2022, I got my Ph.D. degree from **Xi'an Jiaotong University** (**Schoole of Management**), under the supervision of **[Wei Huang](https://www.sustech.edu.cn/zh/faculties/weihuangwayne.html)** and **[Yuewen Liu](http://ibids.cn)**. My research interest is mainly at the intersection of applied machine learning and business analytics/intelligence, including urban computing, spatiotemporal data analysis, social network analytics, and empirical analyses. My work uses cross-discipline methods, such as data science, deep learning, machine learning, complex network analysis, and data visualization, to explore interesting business phenomenons.
+In December 2022, I got my Ph.D. degree from **Xi'an Jiaotong University** (**[Schoole of Management](https://som.xjtu.edu.cn)**), 
+under the supervision of 
+**[Wei Huang](https://www.sustech.edu.cn/zh/faculties/weihuangwayne.html)** and **[Yuewen Liu](https://som.xjtu.edu.cn/info/1014/3597.htm)**. 
+<!-- http://ibids.cn -->
+My research interest is mainly at the intersection of applied machine learning, business intelligence, social governance , including urban computing, 
+spatiotemporal data analysis, social network analytics, and travel behaviors. 
+My work uses cross-discipline methods, such as data science, deep learning, machine learning, complex network analysis, 
+and data visualization, to explore interesting business/social phenomenons.
 
 I can be reached at xuyq_2019[AT]126[DOT]com.
 
 
 # Research Interests
 
-- Business Analytics - Data Analytics, Analytical Modeling, Optimization & Algorithms
-- Business Artificial Intelligence - Predictive Modeling, Statistical Inference, Machine Learning, Social Media/Network Analytics, etc.
-- Personalizations - Recommender Systems, Text Mining
+- Social Governance - Data Analytics, Analytical Modeling, Statistical Inference
+- Urban Computing/Tourism/Transportation - Deep Learning, Machine Learning, Social Media/Network Analytics, Predictive Modeling, etc.
+- Business Artificial Intelligence - Text Mining, Data Visulization
 
 # Education
 
@@ -49,6 +56,8 @@ I can be reached at xuyq_2019[AT]126[DOT]com.
 - Served as a teaching assistant for the graduate courses "Business Big Data Analysis" and the undergraduate courses "Database Fundamentals and Applications" and "Social Networks and Text Analysis".
 - Served as a peer reviewer of TRD, I&M, etc.
 
+
+# Hobbies
 There top 10 dramas I like to watch:
 1. [武林外传](https://movie.douban.com/subject/3882715/)
 2. [地下交通站](https://movie.douban.com/subject/2133474/)
@@ -61,14 +70,4 @@ There top 10 dramas I like to watch:
 9. [神探夏洛克 Sherlock](https://movie.douban.com/subject/3986493/)
 10. [虹猫蓝兔七侠传](https://movie.douban.com/subject/3204594/)
 
-There top 10 dramas I like to watch:
-1. [武林外传](https://movie.douban.com/subject/3882715/)
-2. [地下交通站](https://movie.douban.com/subject/2133474/)
-3. [大明王朝1566](https://movie.douban.com/subject/2210001/)
-4. [Yes, Prime Minister](https://movie.douban.com/subject/1441948/)
-5. [Yes Minister](https://movie.douban.com/subject/4937405/)
-6. [琅琊榜](https://movie.douban.com/subject/25754848/)
-7. [胜者即是正义 リーガル・ハイ](https://movie.douban.com/subject/10491666/)
-8. [请回答1988 응답하라 1988](https://movie.douban.com/subject/26302614/)
-9. [神探夏洛克 Sherlock](https://movie.douban.com/subject/3986493/)
-10. [虹猫蓝兔七侠传](https://movie.douban.com/subject/3204594/)
+
