@@ -2,11 +2,12 @@
 
 ---
 <!-- http://ibids.cn -->
-Hi, I'm Yuquan. Welcome to my personal website!
+# 
+Hi :wave:, I'm Yuquan. Welcome to my personal website!
 
-I like fitness, programming, and graphic design among other things.
+I like fitness :muscle:, programming :man_technologist:, and graphic design :bar_chart: among other things.
 
-In December 2022, I got my Ph.D. degree from **Xi'an Jiaotong University** (**[Schoole of Management](https://som.xjtu.edu.cn)**), 
+In December 2022, I got my Ph.D. degree :mortar_board: from **Xi'an Jiaotong University** (**[Schoole of Management](https://som.xjtu.edu.cn)**), 
 under the supervision of 
 **[Wei Huang](https://www.sustech.edu.cn/zh/faculties/weihuangwayne.html)** and **[Yuewen Liu](https://som.xjtu.edu.cn/info/1014/3597.htm)**. 
 My research interest is mainly at the intersection of applied machine learning, business intelligence, social governance , including urban computing, 
@@ -14,7 +15,7 @@ spatiotemporal data analysis, social network analytics, and travel behavior anal
 My work uses cross-discipline methods, such as data science, deep learning, machine learning, complex network analysis, 
 and data visualization, to explore interesting business/social phenomenons.
 
-I can be reached at xuyq_2019[AT]126[DOT]com.
+I can be reached at xuyq_2019 [AT] 126 [DOT] com.
 
 
 # Research Interests
@@ -57,7 +58,7 @@ I can be reached at xuyq_2019[AT]126[DOT]com.
 
 
 # Hobbies
-There top 10 dramas I like to watch:
+There top 10 TV shows I like to watch:
 1. [武林外传](https://movie.douban.com/subject/3882715/)
 2. [地下交通站](https://movie.douban.com/subject/2133474/)
 3. [大明王朝1566](https://movie.douban.com/subject/2210001/)

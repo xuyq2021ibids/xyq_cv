@@ -14,8 +14,8 @@ menu:
         # - name: POEMS
         #   url: poems/
         #   weight: 20
-        # - name: ABOUT
-        #   url: test1
+        # - name: Viz
+        #   url: /viz/
         #   weight: 20
         # - name: ABOUT
         #   url: test1
