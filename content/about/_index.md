@@ -11,7 +11,7 @@ under the supervision of
 **[Wei Huang](https://www.sustech.edu.cn/zh/faculties/weihuangwayne.html)** and **[Yuewen Liu](https://som.xjtu.edu.cn/info/1014/3597.htm)**. 
 <!-- http://ibids.cn -->
 My research interest is mainly at the intersection of applied machine learning, business intelligence, social governance , including urban computing, 
-spatiotemporal data analysis, social network analytics, and travel behaviors. 
+spatiotemporal data analysis, social network analytics, and travel behavior analytics. 
 My work uses cross-discipline methods, such as data science, deep learning, machine learning, complex network analysis, 
 and data visualization, to explore interesting business/social phenomenons.
 
