@@ -42,8 +42,11 @@ I can be reached at xuyq_2019 [AT] 126 [DOT] com.
   <!-- - Participate in writing the proposal, trajectories data analysis, and risk model design.
   - Publish two articles in SSCI journals. -->
 
-- The National Key Research and Development Program of China (Project No. 2022YFC3320800) and the Yunnan Key Research and Development Program (Project No. 202203ZC100001).
-    <!-- - Two programs are about smart social governance. I participate in writing the proposal, trajectories data analysis, and system design. -->
+- The National Key Research and Development Program of China and the Yunnan Key Research and Development Program.
+
+<!-- - The National Key Research and Development Program of China (Project No. 2022YFC3320800) and the Yunnan Key Research and Development Program (Project No. 202203ZC100001). -->
+
+<!-- - Two programs are about smart social governance. I participate in writing the proposal, trajectories data analysis, and system design. -->
 
 
 # Skills
