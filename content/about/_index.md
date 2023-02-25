@@ -6,17 +6,17 @@
 Hi :wave:, I'm Yuquan. Welcome to my personal website!
 
 I like fitness :muscle:, running :running:, swimming :swimmer:, programming :man_technologist:, and 
- design :pencil2: among other things.
+ design :pencil2:, among other things.
 <!-- graphic -->
 
 
-In December 2022, I got my Ph.D. degree :mortar_board: from **Xi'an Jiaotong University** (**[Schoole of Management](https://som.xjtu.edu.cn)**), 
+In December 2022, I got my Ph.D. degree :mortar_board: from **Xi'an Jiaotong University** (**[School of Management](https://som.xjtu.edu.cn)**), 
 under the supervision of 
 **[Wei Huang](https://www.sustech.edu.cn/zh/faculties/weihuangwayne.html)** and **[Yuewen Liu](https://som.xjtu.edu.cn/info/1014/3597.htm)**. 
-My research interest is mainly at the intersection of applied machine learning, business intelligence, social governance , including urban computing, 
+My research interest is mainly at the intersection of applied machine learning, business intelligence, and social governance, including urban computing, 
 spatiotemporal data analysis, social network analytics, and travel behavior analytics. 
 My work uses cross-discipline methods, such as data science, deep learning, machine learning, complex network analysis, 
-and data visualization, to explore interesting business/social phenomenons.
+and data visualization, to explore interesting business/social phenomena.
 
 I can be reached at xuyq_2019 [AT] 126 [DOT] com.
 
@@ -24,7 +24,7 @@ I can be reached at xuyq_2019 [AT] 126 [DOT] com.
 # Research Interests
 
 - Social Governance - Data Analytics, Analytical Modeling, Statistical Inference
-- Urban Computing/Tourism/Transportation - Deep Learning, Machine Learning, Social Media/Network Analytics, Predictive Modeling, etc.
+- Urban Computing / Tourism / Transportation - Deep Learning, Machine Learning, Social Network Analytics, Predictive Modeling, etc.
 - Business Artificial Intelligence - Text Mining, Data Visualization
 
 # Education
