@@ -22,7 +22,7 @@ I can be reached at xuyq_2019[AT]126[DOT]com.
 
 - Social Governance - Data Analytics, Analytical Modeling, Statistical Inference
 - Urban Computing/Tourism/Transportation - Deep Learning, Machine Learning, Social Media/Network Analytics, Predictive Modeling, etc.
-- Business Artificial Intelligence - Text Mining, Data Visulization
+- Business Artificial Intelligence - Text Mining, Data Visualization
 
 # Education
 
