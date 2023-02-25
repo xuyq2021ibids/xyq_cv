@@ -1,7 +1,7 @@
 ---
 
 ---
-
+<!-- http://ibids.cn -->
 Hi, I'm Yuquan. Welcome to my personal website!
 
 I like fitness, programming, and graphic design among other things.
@@ -9,7 +9,6 @@ I like fitness, programming, and graphic design among other things.
 In December 2022, I got my Ph.D. degree from **Xi'an Jiaotong University** (**[Schoole of Management](https://som.xjtu.edu.cn)**), 
 under the supervision of 
 **[Wei Huang](https://www.sustech.edu.cn/zh/faculties/weihuangwayne.html)** and **[Yuewen Liu](https://som.xjtu.edu.cn/info/1014/3597.htm)**. 
-<!-- http://ibids.cn -->
 My research interest is mainly at the intersection of applied machine learning, business intelligence, social governance , including urban computing, 
 spatiotemporal data analysis, social network analytics, and travel behavior analytics. 
 My work uses cross-discipline methods, such as data science, deep learning, machine learning, complex network analysis, 

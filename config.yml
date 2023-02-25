@@ -79,11 +79,23 @@ params:
 
     # change favicon in images folder (icon for web tab)
     assets:
-          favicon: "/images/favicon.ico"
-          favicon16x16: "/images/favicon-16x16.png"
-          favicon32x32: "/images/favicon-32x32.png"
-          apple_touch_icon: "/images/apple-touch-icon.png"
-          safari_pinned_tab: "/images/apple-touch-icon.png"
+          # favicon: "/images/favicon.ico"
+          # favicon16x16: "/images/favicon-16x16.png"
+          # favicon32x32: "/images/favicon-32x32.png"
+          # apple_touch_icon: "/images/apple-touch-icon.png"
+          # safari_pinned_tab: "/images/apple-touch-icon.png"
+          
+          # favicon: "/images/ghost-emoji-512x512.png"
+          # favicon16x16: "/images/ghost-emoji-512x512.png"
+          # favicon32x32: "/images/ghost-emoji-512x512.png"
+          # apple_touch_icon: "/images/ghost-emoji-512x512.png"
+          # safari_pinned_tab: "/images/ghost-emoji-512x512.png"
+
+          favicon: "/images/ghost-2.png"
+          favicon16x16: "/images/ghost-2.png"
+          favicon32x32: "/images/ghost-2.png"
+          apple_touch_icon: "/images/ghost-2.png"
+          safari_pinned_tab: "/images/ghost-2.png"
 
 
 
