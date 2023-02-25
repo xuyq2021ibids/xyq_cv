@@ -60,14 +60,14 @@ params:
           # url: "https://www.buymeacoffee.com/xuyq"
         # - name: googlescholar
         #   url: "https://ko-fi.com/heycharlola"
-        - name: github
-          url: "https://github.com/xuyq2021ibids"
+        # - name: github
+        #   url: "https://github.com/xuyq2021ibids"
         # - name: linkedin
         #   url: "https://www.linkedin.cn/incareer/in/ACoAABGR27ABPsE7MsKA3KK1ilztK4fTaloBr28"
-        # - name: stackoverflow
-        #   url: "https://stackoverflow.com/users/6137782"
+        - name: stackoverflow
+          url: "https://stackoverflow.com/users/6137782"
         - name: cv
-          url: "https://yuquan.netlify.app"
+          url: "https://yuquan.netlify.app/about/"
       # add more social icons. find more in svg.html file
       # - name: youtube
       #   url: yoururl
