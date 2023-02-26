@@ -32,23 +32,6 @@ I can be reached at xuyq_2019 [AT] 126 [DOT] com.
 - Ph.D. in Management Science and Engineering (Major in Information Systems), Xi'an Jiaotong University, Xi'an, China
 - B.A. in Industrial Engineering, Xi'an Jiaotong University, Xi'an, China
 
-# Research Fund Experience
-- Funds of National Natural Science Foundation of China: 
-  1. The Crowding Out Effect of Monetary Incentives on User Generated Content (Project No. 71871179).
-    <!-- - Participate in writing the proposal and UGC data collection. -->
-- Special Funds of the National Natural Science Foundation of China: 
-  1. The Study of Epidemic Precise Prevention Strategy and Big Data Systems in the Large-Scale Population Flow (Project No. 62041206)
-  2. The Study and Application of the Sentinel Surveillance Identification and Refined Epidemic Prevention Area based on Integrated Multi-Source Trajectory Data (Project No. 62141223).
-  <!-- - Participate in writing the proposal, trajectories data analysis, and risk model design.
-  - Publish two articles in SSCI journals. -->
-
-- The National Key Research and Development Program of China and the Yunnan Key Research and Development Program.
-
-<!-- - The National Key Research and Development Program of China (Project No. 2022YFC3320800) and the Yunnan Key Research and Development Program (Project No. 202203ZC100001). -->
-
-<!-- - Two programs are about smart social governance. I participate in writing the proposal, trajectories data analysis, and system design. -->
-
-
 # Skills
 - Master theories and methods in machine learning, big data engineering, and complex network analysis.
 - Master programming tools in Python, R, SQL,  etc.	
@@ -64,7 +47,8 @@ I can be reached at xuyq_2019 [AT] 126 [DOT] com.
 
 
 # Hobbies
-There are top 10 TV shows I like to watch:
+<!-- There are top 10 TV shows I like to watch: -->
+These are my top 10 favorite TV shows to watch：
 1. [武林外传](https://movie.douban.com/subject/3882715/)
 2. [地下交通站](https://movie.douban.com/subject/2133474/)
 3. [大明王朝1566](https://movie.douban.com/subject/2210001/)

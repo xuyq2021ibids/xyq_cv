@@ -24,7 +24,7 @@
 3. **Yuquan Xu** and Yuewen Liu. Predicting intercity and intracity travel with graph neural network and attention mechanism. (Writing stage)
 
 
-# Conference Articles
+# Conference Papers
 
 1. **Yuquan Xu**, Yuewen Liu, and Wei Huang. Understanding the Role of IS in Business Disciplines: A Network Perspective. International Conference on Data Science 2016 (Xi'an)
 
@@ -39,3 +39,19 @@
 
 - 专利
   - 一种基于地理位置变更的移动社交网络好友推荐方法及系统（201510937500.2）     发明型     发明人：刘跃文，陈川，黄伟，刘盈，姜锦虎，贺鹏，常象宇，孟佩君，徐毓全 -->
+
+# Research Fund Experience
+- Funds of National Natural Science Foundation of China: 
+  1. The Crowding Out Effect of Monetary Incentives on User Generated Content (Project No. 71871179).
+    <!-- - Participate in writing the proposal and UGC data collection. -->
+- Special Funds of the National Natural Science Foundation of China: 
+  1. The Study of Epidemic Precise Prevention Strategy and Big Data Systems in the Large-Scale Population Flow (Project No. 62041206)
+  2. The Study and Application of the Sentinel Surveillance Identification and Refined Epidemic Prevention Area based on Integrated Multi-Source Trajectory Data (Project No. 62141223).
+  <!-- - Participate in writing the proposal, trajectories data analysis, and risk model design.
+  - Publish two articles in SSCI journals. -->
+
+- The National Key Research and Development Program of China and the Yunnan Key Research and Development Program.
+
+<!-- - The National Key Research and Development Program of China (Project No. 2022YFC3320800) and the Yunnan Key Research and Development Program (Project No. 202203ZC100001). -->
+
+<!-- - Two programs are about smart social governance. I participate in writing the proposal, trajectories data analysis, and system design. -->
