@@ -23,9 +23,10 @@ I can be reached at xuyq_2019 [AT] 126 [DOT] com.
 
 # Research Interests
 
-- Social Governance - Data Analytics, Analytical Modeling, Statistical Inference
-- Urban Computing / Tourism / Transportation - Deep Learning, Machine Learning, Social Network Analytics, Predictive Modeling, etc.
-- Business Artificial Intelligence - Text Mining, Data Visualization
+- Social Governance - Data Analytics, Analytical Modeling, Econometrics, Social Network Analytics
+- Urban Computing / Transportation - Deep Learning, Machine Learning, Predictive Modeling, etc.
+- Tourism - Data Visualization, Econometrics, Statistical Inference
+<!-- - Business Artificial Intelligence -  -->
 
 # Education
 
