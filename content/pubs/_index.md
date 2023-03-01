@@ -4,7 +4,7 @@
 
 # Research Papers 
 
-1. Hengyu Zhang, Yuewen Liu, **Yuquan Xu**, Min Liu, Ping An. 2023. An improved convolutional network capturing spatial heterogeneity and correlation for crowd flow prediction. **Expert Systems With Applications** (forthcoming).
+1. Hengyu Zhang, Yuewen Liu, **Yuquan Xu**, Min Liu, Ping An. 2023. An improved convolutional network capturing spatial heterogeneity and correlation for crowd flow prediction. _**Expert Systems With Applications**, 220_, 119702. (AJG 1, SCI, JCR Q1, IF:8.67)
 
 2. **Yuquan Xu**, Yuewen Liu*, Xiangyu Chang, Wei Huang. 2021. How does air pollution affect travel behavior? A big data field study. _**Transportation Research Part D: Transport and Environment**, 99_, 103007. (AJG 3, SSCI, JCR Q1, IF:7.04)
 
