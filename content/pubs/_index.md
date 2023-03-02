@@ -2,6 +2,9 @@
 
 ---
 
+My research is in a data-driven field. I collaborate with companies and government to solve the research problem. My studies are mainly related to spatiotemporal data and corresponding methods. The research data include mobile signaling records, hotel check-in registers, train ticket data, airline ticket data, high-speed rail data, etc. My research methods are typical time series modes, machine learning models, and deep learning models (such as spatiotemporal nural networks).
+
+
 # Research Papers 
 
 1. Hengyu Zhang, Yuewen Liu, **Yuquan Xu**, Min Liu, Ping An. 2023. An improved convolutional network capturing spatial heterogeneity and correlation for crowd flow prediction. _**Expert Systems With Applications**, 220_, 119702. (AJG 1, SCI, JCR Q1, IF: 8.67)
