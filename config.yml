@@ -42,10 +42,10 @@ params:
         enabled: true
         title: Yuquan Xu
         subtitle: "__Data Scientist | Ph.D. in Management Science and Engineering__"
-        imageUrl: "/images/logo2.jpg"
+        imageUrl: "/images/xyq_white_256_310.jpg"
         imageTitle: 
-        imageWidth: 250
-        imageHeight: 250
+        imageWidth: 256
+        imageHeight: 310
         buttons:
             # - name: Don't click me
             #   url: https://www.bilibili.com/video/BV1j4411W7F7

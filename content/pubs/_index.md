@@ -1,8 +1,9 @@
 ---
 
 ---
+# 
 
-My research is in a data-driven field. I collaborate with companies and government to solve the research problem. My studies are mainly related to spatiotemporal data and corresponding methods. The research data include mobile signaling records, hotel check-in registers, train ticket data, airline ticket data, high-speed rail data, etc. My research methods are typical time series modes, machine learning models, and deep learning models (such as spatiotemporal nural networks).
+My research is in a data-driven field. I collaborate with companies and government to solve the research problem. My studies are mainly related to spatiotemporal data and corresponding methods. The research data include mobile signaling records, hotel check-in registers, train ticket data, airline ticket data, high-speed rail data, etc. My research methods are typical time series modes, machine learning models, and deep learning models (such as spatiotemporal neural networks).
 
 
 # Research Papers 
