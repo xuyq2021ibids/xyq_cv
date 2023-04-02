@@ -24,11 +24,15 @@ I am a researcher in data science, collaborating with companies and the governme
 
 # Working Papers
 
-1. **Yuquan Xu** and Yuewen Liu. A Spatiotemporal Neural Network to Predict Crowd Distribution. (Preparing for submission to Tourism Management, AJG 4, SSCI, JCR Q1, IF:12.88)
+1. **Yuquan Xu** and Yuewen Liu. A Spatiotemporal Neural Network to Predict Crowd Distribution. (Under Review).
 
-2. **Yuquan Xu** and Yuewen Liu. Understanding the tourist flow network from a hotel perspective: a big data analysis using hotel check-in registers. (Preparing for submission to International Journal of Contemporary Hospitality Management, AJG 3, SSCI, JCR Q1, IF:9.32)
+<!-- (Preparing for submission to Tourism Management, AJG 4, SSCI, JCR Q1, IF:12.88) -->
 
-3. **Yuquan Xu** and Yuewen Liu. Predicting intercity and intracity travel with graph neural network and attention mechanism. (Writing stage)
+2. **Yuquan Xu** and Yuewen Liu. Understanding the tourist flow network from a hotel perspective: a big data analysis using hotel check-in registers. (Under Review).
+
+<!--  (Preparing for submission to International Journal of Contemporary Hospitality Management, AJG 3, SSCI, JCR Q1, IF:9.32) -->
+
+<!-- 4. **Yuquan Xu** and Yuewen Liu. Predicting intercity and intracity travel with graph neural network and attention mechanism. (Writing stage) -->
 
 
 # Conference Papers
