@@ -48,6 +48,7 @@
 {{- end }}
 
 <article class="{{ $class }}">
+  <!-- 此处修改list的项目的呈现，比如要不要呈现作者，要不要呈现描述等 -->
   {{- $isHidden := (.Site.Params.cover.hidden | default .Site.Params.cover.hiddenInList) }}
   {{- partial "cover.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden) }}
   <header class="entry-header">

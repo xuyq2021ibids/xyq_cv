@@ -1,4 +1,8 @@
-
+---
+title: jupyter常用配置
+hideSummary: True
+hideMeta: True
+---
 
 
 

@@ -1,7 +1,7 @@
 ---
-title: emoji-cheat-sheet速查表
-author: xyq
-
+title: emoji速查表
+hideSummary: True
+hideMeta: True
 ---
 
 

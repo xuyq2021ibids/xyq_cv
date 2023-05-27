@@ -1,4 +1,8 @@
-
+---
+title: iBIDS服务器的管理
+hideSummary: True
+hideMeta: True
+---
 
 ## 添加用户
 

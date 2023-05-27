@@ -1,7 +1,7 @@
 ---
 title: vscode常用配置
-
-
+hideSummary: True
+hideMeta: True
 ---
 
 
