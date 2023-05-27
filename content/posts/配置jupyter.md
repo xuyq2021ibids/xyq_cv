@@ -1,0 +1,45 @@
+
+
+
+
+
+jupyter的常用配置
+
+有时候没法用pycharm，有需要交互的调参，就需要jupyter配置一下。
+我一般习惯于用jupyterlab
+
+## 1. jupyter-lab安装包
+`conda create -n YOUR_ENVIRONMENT python pandas seaborn xgboost`
+
+`conda install jupyterlab -c conda-forge`
+
+## 2. python版本的ggplot安装包
+`conda install plotnine -c conda-forge`
+
+## 3. jupyterlab-lsp自动补全代码的官方建议
+- `conda install -c conda-forge 'jupyterlab>=3.0.0,<4.0.0a0' jupyterlab-lsp`
+
+- `conda install -c conda-forge python-lsp-server r-languageserver`
+
+由于已经安过了jupyterlab，也不需要r的服务，直接用下面这个命令就行\
+`conda install -c conda-forge jupyterlab-lsp python-lsp-server`
+## 4. jupyterlab-code-formatter代码自动格式化
+还有一个自动formatter的服务，自动格式化jupyter的服务
+`conda install -c conda-forge jupyterlab-code-formatter`
+老装不上
+
+先装一个`balck`和`isort`用`conda`，再用`pip`装`jupyterlab-code-formatter`
+这两个瓜皮（`balck`和`isort`）都不熟悉，还是用`autopep8`好了
+尽量避免conda和pip混用
+
+装好autopep8之后去jupyterlab的setting里把`jupyterlab-code-formatter`的默认引擎换成autopep8
+
+最后重启jupyterlab服务，而不是内核
+
+
+
+
+
+
+
+
