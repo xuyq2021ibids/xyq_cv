@@ -40,10 +40,13 @@ jupyter的常用配置
 
 最后重启jupyterlab服务，而不是内核
 
-
-
-
-
-
-
-
+## jupyterlab添加或删除内核
+- 切换到要添加的环境，确认已安装ipykernel
+  - `python -m ipykernel --version`
+  - 如果没有安装，则安装：`conda install ipykernel`
+- jupyter安装内核（kernel）
+  - `python -m ipykernel install --user --name=xxx --display-name "在notebook中显示的环境名"` xxx是你的虚拟环境名称
+- 查看jupyter notebook kernel
+  - jupyter kernelspec list
+- jupyter删除内核
+  - `jupyter kernelspec remove kernelname` kernelname是你的虚拟环境名称（即上面添加的内核名称）
