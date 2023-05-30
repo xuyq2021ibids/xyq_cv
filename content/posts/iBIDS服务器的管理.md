@@ -21,8 +21,3 @@ conda activate jupyterLab
 ```
 ## 4. 给jupyterhub添加用户
 `sudo vi /etc/jupyterhub/jupyterhub_config.py`
-
-## 5. 待补充【一些来在公司的常用命令记录】
-
-
-
