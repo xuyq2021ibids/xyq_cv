@@ -16,5 +16,6 @@ hideMeta: True
 - cdoe spell checker
 - Chinese
 - vscode-icones
+- CJK Word Handler
 
 
