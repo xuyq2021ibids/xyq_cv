@@ -1,3 +1,8 @@
+---
+title: xgb多GPU训练教程
+hideSummary: True
+hideMeta: True
+---
 
 # 1. 背景
 
@@ -20,6 +25,7 @@ xgb在gpu训练上速度很快，单个就几秒钟解决。但是涉及到超�
 
 先装`cudf`
 `conda install -c rapidsai -c conda-forge -c nvidia cudf=23.04 cudatoolkit=11.8`
+
 再装`dask-cudf`
 `conda install -c rapidsai dask-cudf`
 
