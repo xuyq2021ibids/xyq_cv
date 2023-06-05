@@ -29,8 +29,8 @@ jupyter的常用配置
 `conda install -c conda-forge jupyterlab-lsp python-lsp-server`
 ## 4. jupyterlab-code-formatter代码自动格式化
 还有一个自动formatter的服务，自动格式化jupyter的服务
-`conda install -c conda-forge jupyterlab-code-formatter`
-老装不上
+`conda install -c conda-forge jupyterlab_code_ormatter`
+老装不上(**注意下划线和破折号的区别**)
 
 先装一个`balck`和`isort`用`conda`，再用`pip`装`jupyterlab-code-formatter`
 这两个瓜皮（`balck`和`isort`）都不熟悉，还是用`autopep8`好了
