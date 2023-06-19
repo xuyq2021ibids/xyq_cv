@@ -37,31 +37,3 @@ hive_read_sql = "SELECT * FROM XXX"
 df = ss.sql(hive_read_sql)
 
 ```
-
-# 多窗口管理
-
-一种方式是用nhup，还有一种是[tmux](https://www.ruanyifeng.com/blog/2019/10/tmux.html)
-
-Ctrl+b d：分离当前会话。
-Ctrl+b s：列出所有会话。
-Ctrl+b $：重命名当前会话。
-## 新建会话和列出会话
-```bash
-$ tmux new -s <session-name>
-$ tmux ls
-```
-
-## 切换会话
-```bash
-# 使用会话编号
-$ tmux switch -t 0
-# 使用会话名称
-$ tmux switch -t <session-name>
-```
-## 杀掉会话
-```bash
-# 使用会话编号
-$ tmux kill-session -t 0
-# 使用会话名称
-$ tmux kill-session -t <session-name>
-```

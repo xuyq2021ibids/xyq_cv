@@ -120,3 +120,47 @@ hideMeta: True
 `&`和`nohub`的区别和常见使用场景
 `&`代表后台执行，免疫SIGINT信号（`Ctrl+C`），但是不免疫SIGHUP信号（关闭shell）；`nohub`相反，关闭shell仍会执行，但是`Ctrl+C`可以中断执行。因此可以将这两个联合使用，让进程既不受`Ctrl+C`影响，也不受shell关闭影响，类似守护进程。
 
+## 13. 多窗口管理
+
+一种方式是用nhup，还有一种是[tmux](https://www.ruanyifeng.com/blog/2019/10/tmux.html)
+
+[一文助你打通 tmux](https://zhuanlan.zhihu.com/p/102546608)
+
+### 13.1. 新建会话和列出会话
+```bash
+$ tmux
+$ tmux new -s <session-name>
+$ tmux ls
+```
+### 13.2. 切换会话
+```bash
+# 使用会话编号
+$ tmux switch -t 0
+# 使用会话名称
+$ tmux switch -t <session-name>
+```
+### 13.3. 杀掉会话
+```bash
+# 使用会话编号
+$ tmux kill-session -t 0
+# 使用会话名称
+$ tmux kill-session -t <session-name>
+# 或者在session里面按ctrl+d
+ctrl + d
+```
+### 13.3. 退出会话和再次进入
+`ctrl + b, d`
+```bash
+$ tmux a -t session_name_or_id
+```
+
+### 13.4. 新建窗口
+`ctrl + b, % 或者 "`
+
+### 13.5. 切换窗口
+`ctrl + b, 光标`
+
+### 13.6. 关闭窗口
+`ctrl + b, x`
+
+
