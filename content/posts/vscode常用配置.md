@@ -18,4 +18,16 @@ hideMeta: True
 - vscode-icones
 - CJK Word Handler
 
+# 2. 配置vscode的终端颜色
+
+模板参考：[here](https://glitchbone.github.io/vscode-base16-term/#/darktooth)
+
+- [bright](https://glitchbone.github.io/vscode-base16-term/#/bright)
+- [pop](https://glitchbone.github.io/vscode-base16-term/#/pop)
+- [darktooth](https://glitchbone.github.io/vscode-base16-term/#/darktooth)
+- [solarflare](https://glitchbone.github.io/vscode-base16-term/#/solarflare)
+- [atelier-forest](https://glitchbone.github.io/vscode-base16-term/#/atelier-forest)
+
+
+
 
