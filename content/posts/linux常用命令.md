@@ -163,4 +163,7 @@ $ tmux a -t session_name_or_id
 ### 13.6. 关闭窗口
 `ctrl + b, x`
 
+### 13.7. 调节窗口大小
+`ctrl + b, 光标`
+
 
