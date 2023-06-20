@@ -164,6 +164,6 @@ $ tmux a -t session_name_or_id
 `ctrl + b, x`
 
 ### 13.7. 调节窗口大小
-`ctrl + b, 光标`
+`ctrl + b, ctrl + 光标`
 
 
