@@ -29,5 +29,8 @@ hideMeta: True
 - [atelier-forest](https://glitchbone.github.io/vscode-base16-term/#/atelier-forest)
 
 
+# 3. 其他技巧
 
+- `alt + 鼠标点击`，可以多处选中
+- `ctrl + shift + L`，可以多处选中同一串字符
 
