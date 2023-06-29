@@ -67,7 +67,8 @@ params:
         - name: stackoverflow
           url: "https://stackoverflow.com/users/6137782"
         - name: cv
-          url: "https://yuquan.netlify.app/about/"
+          url: "https://dr.xuyuquan.website/about/"
+      # "https://yuquan.netlify.app/about/"
       # add more social icons. find more in svg.html file
       # - name: youtube
       #   url: yoururl
