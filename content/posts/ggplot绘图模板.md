@@ -4,6 +4,10 @@ hideSummary: True
 hideMeta: True
 ---
 
+设置语言
+```r
+Sys.setlocale("LC_ALL","US")
+```
 
 
 
