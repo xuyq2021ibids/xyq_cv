@@ -1,5 +1,8 @@
 ---
 title: python的多进程操作
+# categories: python
+# tags: "python"
+# keywords: "python"
 hideSummary: True
 hideMeta: True
 ---
