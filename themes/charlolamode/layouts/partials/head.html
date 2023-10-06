@@ -86,6 +86,20 @@
 {{- $isHLJSdisabled := (.Site.Params.assets.disableHLJS | default .Params.disableHLJS ) }}
 {{- if (and (eq .Kind "page") (ne .Layout "archives") (ne .Layout "search") (not $isHLJSdisabled)) }}
 {{- if not .Site.Params.assets.disableFingerprinting }}
+{{- $highlight := slice (resources.Get "https://github.com/xuyq2021ibids/xyq_cv/blob/master/static/js/highlight.min.js") | resources.Concat "assets/js/highlight.js" | minify | fingerprint }}
+<script defer crossorigin="anonymous" src="{{ $highlight.Permalink }}" integrity="{{ $highlight.Data.Integrity }}"
+    onload="hljs.initHighlightingOnLoad();"></script>
+{{- else }}
+{{- $highlight := slice (resources.Get "https://github.com/xuyq2021ibids/xyq_cv/blob/master/static/js/highlight.min.js") | resources.Concat "assets/js/highlight.js" | minify }}
+<script defer crossorigin="anonymous" src="{{ $highlight.Permalink }}" onload="hljs.initHighlightingOnLoad();"></script>
+{{- end }}
+{{- end }}
+
+<!-- 
+{{- /* Highlight.js */}}
+{{- $isHLJSdisabled := (.Site.Params.assets.disableHLJS | default .Params.disableHLJS ) }}
+{{- if (and (eq .Kind "page") (ne .Layout "archives") (ne .Layout "search") (not $isHLJSdisabled)) }}
+{{- if not .Site.Params.assets.disableFingerprinting }}
 {{- $highlight := slice (resources.Get "js/highlight.min.js") | resources.Concat "assets/js/highlight.js" | minify | fingerprint }}
 <script defer crossorigin="anonymous" src="{{ $highlight.RelPermalink }}" integrity="{{ $highlight.Data.Integrity }}"
     onload="hljs.initHighlightingOnLoad();"></script>
@@ -93,7 +107,8 @@
 {{- $highlight := slice (resources.Get "js/highlight.min.js") | resources.Concat "assets/js/highlight.js" | minify }}
 <script defer crossorigin="anonymous" src="{{ $highlight.RelPermalink }}" onload="hljs.initHighlightingOnLoad();"></script>
 {{- end }}
-{{- end }}
+{{- end }} -->
+
 
 {{- /* Favicons */}}
 <link rel="icon" href="{{ .Site.Params.assets.favicon | default "favicon.ico" | absURL }}">
