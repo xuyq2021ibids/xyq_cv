@@ -83,7 +83,6 @@
 {{- end -}}
 
 
-
 {{- /* Highlight.js */}}
 {{- $isHLJSdisabled := (.Site.Params.assets.disableHLJS | default .Params.disableHLJS ) }}
 {{- if (and (eq .Kind "page") (ne .Layout "archives") (ne .Layout "search") (not $isHLJSdisabled)) }}
@@ -96,8 +95,6 @@
 <script defer crossorigin="anonymous" src="{{ $highlight.RelPermalink }}" onload="hljs.initHighlightingOnLoad();"></script>
 {{- end }}
 {{- end }}
-
-
 
 
 
