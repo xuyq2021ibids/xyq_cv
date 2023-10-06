@@ -84,12 +84,8 @@
 
 
 {{- /* Highlight.js */}}
-{{- $isHLJSdisabled := (.Site.Params.assets.disableHLJS | default .Params.disableHLJS ) }}
-{{- if (and (eq .Kind "page") (ne .Layout "archives") (ne .Layout "search") (not $isHLJSdisabled)) }}
 
-        <script src="https://raw.githubusercontent.com/xuyq2021ibids/xyq_cv/master/static/js/highlight.min.js" ></script>
-
-{{- end }}
+<script src="https://raw.githubusercontent.com/xuyq2021ibids/xyq_cv/master/static/js/highlight.min.js" ></script>
 
 
 
