@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>nvidia-smi挂掉了怎么办 | Yuquan</title>
+<meta name="keywords" content="" />
+<meta name="description" content="1. 重启 2. 重启不行 看这个
+https://blog.csdn.net/qq_40200387/article/details/90341107
+cat /proc/driver/nvidia/version
+cat /var/log/dpkg.log | grep nvidia
+sudo dpkg --list | grep nvidia-*
+sudo apt-get purge nvidia*
+sudo add-apt-repository ppa:graphics-drivers sudo apt-get update sudo apt-get install nvidia-415 nvidia-settings nvidia-prime
+nvidia-smi
+sudo apt-mark hold nvidia-415（可不做，没成功过）">
+<meta name="author" content="Yuquan">
+<link rel="canonical" href="/posts/nvidia-smi%E6%8C%82%E6%8E%89%E4%BA%86%E6%80%8E%E4%B9%88%E5%8A%9E/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.29f8ec3d41bdc6b8c6285e3876c53f7692399e65b1e548daa88820758769e662.css" integrity="sha256-KfjsPUG9xrjGKF44dsU/dpI5nmWx5UjaqIggdYdp5mI=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.f31140db67161625dbdecd790d867c07e4599ecbd77dc7e79a788c294e4bbbf2.js" integrity="sha256-8xFA22cWFiXb3s15DYZ8B&#43;RZnsvXfcfnmniMKU5Lu/I="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="/images/ghost-2.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/ghost-2.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/ghost-2.png">
+<link rel="apple-touch-icon" href="/images/ghost-2.png">
+<link rel="mask-icon" href="/images/ghost-2.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="" accesskey="h" title="Yuquan (Alt + H)">Yuquan</a>
+            <span class="logo-switches">
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="/" title="Home"><span>HOME</span></a>
+            </li>
+            <li>
+                <a href="/pubs/" title="RESEARCH">
+                    <span>RESEARCH</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/" title="ABOUT">
+                    <span>ABOUT</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="">Home</a>&nbsp;»&nbsp;<a href="/posts/">Posts</a></div>
+    <h1 class="post-title">
+      nvidia-smi挂掉了怎么办
+    </h1>
+  </header> 
+  <div class="post-content">
+<h1 id="1-重启">1. 重启</h1>
+<h1 id="2-重启不行">2. 重启不行</h1>
+<p>看这个</p>
+<p><a href="https://blog.csdn.net/qq_40200387/article/details/90341107">https://blog.csdn.net/qq_40200387/article/details/90341107</a></p>
+<p><code>cat /proc/driver/nvidia/version</code></p>
+<p><code>cat /var/log/dpkg.log | grep nvidia</code></p>
+<p><code>sudo dpkg --list | grep nvidia-*</code></p>
+<p><code>sudo apt-get purge nvidia*</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo add-apt-repository ppa:graphics-drivers
+</span></span><span class="line"><span class="cl">sudo apt-get update
+</span></span></code></pre></div><p><code>sudo apt-get install nvidia-415 nvidia-settings nvidia-prime</code></p>
+<p><code>nvidia-smi</code></p>
+<p><code>sudo apt-mark hold nvidia-415</code>（可不做，没成功过）</p>
+
+  </div>
+
+  <footer class="post-footer">
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    
+    
+    <div><span> <a href="">Yuquan</a> 
+        , 2019 - 2023,  Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> 
+    </span></div>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = 'copy';
+
+        function copyingDone() {
+            copybutton.innerText = 'copied!';
+            setTimeout(() => {
+                copybutton.innerText = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

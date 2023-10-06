@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>linux常用命令 | Yuquan</title>
+<meta name="keywords" content="" />
+<meta name="description" content="1. Jupyter Lab 密码登录、远程访问 2. 后台挂起某个任务 nohup jupyter-lab --port 9990 --ip 0.0.0.0 --no-browser &gt; stdout.txt 2&gt; stderr.txt &amp; 使用 jobs 命令可以查看当前 shell 中后台运行的任务列表，包括任务编号、状态和命令。 3. 查看某个用户的进程 top -u xuyuquan
+4. 查找某个特定进程 以下这条命令是检查sshd进程是否存在： ps -ef | grep sshd
+5. 杀死某个特定进程 kill -9 PID
+6. 创建用户 adduser UserName --home the_path_to_home
+usermod –aG wheel UserName/wheel
+passwd UserName
+7. 查看端口 查看某个端口是否被占用 netstat -anp |grep 端口号 查看已经使用的端口号 netstat -nultp（此处不用加端口号） 8. 删除用户 想要完全删除用户账号（也就是删除所有与该用户相关的文件），以下这两种方法个人觉得是最好的： （1）使用userdel -r xiaoluo命令删除。 （2）先使用userdel xiaoluo删除账户和组的信息，在使用find查找所有与该用户的相关文件，在使用rm -rf删除 先使用userdel xiaoluo删除账户和组的信息，再使用【find / -name &quot;*xiaoluo*&quot;】查找所有于该用户的相关文件，在使用rm -rf删除">
+<meta name="author" content="Yuquan">
+<link rel="canonical" href="/posts/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.29f8ec3d41bdc6b8c6285e3876c53f7692399e65b1e548daa88820758769e662.css" integrity="sha256-KfjsPUG9xrjGKF44dsU/dpI5nmWx5UjaqIggdYdp5mI=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.f31140db67161625dbdecd790d867c07e4599ecbd77dc7e79a788c294e4bbbf2.js" integrity="sha256-8xFA22cWFiXb3s15DYZ8B&#43;RZnsvXfcfnmniMKU5Lu/I="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="/images/ghost-2.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/ghost-2.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/ghost-2.png">
+<link rel="apple-touch-icon" href="/images/ghost-2.png">
+<link rel="mask-icon" href="/images/ghost-2.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="" accesskey="h" title="Yuquan (Alt + H)">Yuquan</a>
+            <span class="logo-switches">
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="/" title="Home"><span>HOME</span></a>
+            </li>
+            <li>
+                <a href="/pubs/" title="RESEARCH">
+                    <span>RESEARCH</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/" title="ABOUT">
+                    <span>ABOUT</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="">Home</a>&nbsp;»&nbsp;<a href="/posts/">Posts</a></div>
+    <h1 class="post-title">
+      linux常用命令
+    </h1>
+  </header> 
+  <div class="post-content">
+<h2 id="1-jupyter-lab-密码登录远程访问httpsblogcsdnnetqq_27370437articledetails117845115">1. <a href="https://blog.csdn.net/qq_27370437/article/details/117845115">Jupyter Lab 密码登录、远程访问</a></h2>
+<h2 id="2-后台挂起某个任务httpszhuanlanzhihucomp617627144">2. <a href="https://zhuanlan.zhihu.com/p/617627144">后台挂起某个任务</a></h2>
+<ul>
+<li><code>nohup jupyter-lab --port 9990  --ip 0.0.0.0 --no-browser &gt; stdout.txt 2&gt; stderr.txt &amp;</code></li>
+<li>使用 jobs 命令可以查看当前 shell 中后台运行的任务列表，包括任务编号、状态和命令。</li>
+</ul>
+<h2 id="3-查看某个用户的进程">3. 查看某个用户的进程</h2>
+<p><code>top -u xuyuquan</code></p>
+<h2 id="4-查找某个特定进程">4. 查找某个特定进程</h2>
+<p>以下这条命令是检查sshd进程是否存在：
+<code>ps -ef | grep sshd</code></p>
+<h2 id="5-杀死某个特定进程">5. 杀死某个特定进程</h2>
+<p><code>kill -9 PID</code></p>
+<h2 id="6-创建用户">6. 创建用户</h2>
+<p><code>adduser UserName --home the_path_to_home</code></p>
+<p><code>usermod –aG wheel UserName/wheel</code></p>
+<p><code>passwd UserName</code></p>
+<h2 id="7-查看端口">7. 查看端口</h2>
+<ul>
+<li>查看某个端口是否被占用
+<ul>
+<li><code>netstat -anp |grep 端口号</code></li>
+</ul>
+</li>
+<li>查看已经使用的端口号
+<ul>
+<li><code>netstat -nultp（此处不用加端口号）</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="8-删除用户">8. 删除用户</h2>
+<p>想要完全删除用户账号（也就是删除所有与该用户相关的文件），以下这两种方法个人觉得是最好的：
+（1）使用<code>userdel -r xiaoluo</code>命令删除。
+（2）先使用<code>userdel xiaoluo</code>删除账户和组的信息，在使用find查找所有与该用户的相关文件，在使用<code>rm -rf</code>删除
+先使用<code>userdel xiaoluo</code>删除账户和组的信息，再使用【<code>find / -name &quot;*xiaoluo*&quot;</code>】查找所有于该用户的相关文件，在使用<code>rm -rf</code>删除</p>
+<h2 id="9-linux下的用户配置文件httpszhuanlanzhihucomp435749651">9. <a href="https://zhuanlan.zhihu.com/p/435749651">Linux下的用户配置文件</a></h2>
+<p>主要就是四个文件</p>
+<ul>
+<li><code>/etc/passwd</code></li>
+<li><code>/etc/shadow</code></li>
+<li><code>/etc/group</code></li>
+<li><code>/etc/gshadow</code></li>
+</ul>
+<h3 id="91-用户信息文件etcpasswd">9.1. 用户信息文件/etc/passwd</h3>
+<p>第一字段：用户名称</p>
+<p>第二字段：密码标志</p>
+<p>第三字段：UID</p>
+<p>0：超级用户</p>
+<p>1-499：系统用户</p>
+<p>500-65535：普通用户</p>
+<p>第四字段：GID（用户初始组ID）</p>
+<p>第五字段：用户说明</p>
+<p>第六字段：家目录，普通用户：/home/用户名/ 超级用户/root/</p>
+<p>第七字段：登录之后的SHELL</p>
+<h3 id="92-影子文件etcshadow">9.2. 影子文件/etc/shadow</h3>
+<p>第一字段：用户名</p>
+<p>第二字段：加密密码，加密算法升级为SHA512散列加密算法，如果密码位是“！！”或“*”代表没有密码，不能登录</p>
+<p>第三字段：密码最后一次修改日期，使用1970年1月1日作为标准时间，每过一天时间戳加一</p>
+<p>第四字段：两次密码的修改时间间隔时间（和第三字段相比）</p>
+<p>第五字段：密码有效期（和第三字段相比）</p>
+<p>第六字段：密码修改到期的警告天数（和第五字段相比）</p>
+<p>第七字段：是密码过期后的宽限天数（和第5字段相比）0：代表密码过期后立即生效，-1：则代表密码永远不会失效。</p>
+<p>第八字段：账号失效时间，要用时间戳表示</p>
+<p>第九字段：保留</p>
+<h3 id="93-组信息文件etcgroup和组密码文件etcgshadow">9.3. 组信息文件/etc/group和组密码文件/etc/gshadow</h3>
+<p>第一字段：组名</p>
+<p>第二字段：组密码标志</p>
+<p>第三字段：GID</p>
+<p>第四字段：组中附加用户</p>
+<h2 id="10-linux下的压缩和解压缩tar命令">10. linux下的压缩和解压缩tar命令</h2>
+<p>解包：<code>tar -zxvf FileName.tar</code></p>
+<p>打包：<code>tar -czvf FileName.tar [-C DirName .（or其他目录名）][DirName]</code></p>
+<p><code>zip -rq FileName.zip FileName</code></p>
+<p><strong><code>zip</code>就是个煞笔命令，不能跳转指定目录。不在当前目录压缩就会把绝对路径带进去，坚决不要使用这个傻逼。</strong></p>
+<h2 id="11-的意义">11. <code>&amp;</code>的意义</h2>
+<p>放在命令最后，代表这条命令放到后台去执行，此时可以执行新的命令了。</p>
+<h2 id="12-nohub的意义">12. <code>nohub</code>的意义</h2>
+<p>全称 no hangup 即不挂起，即使关掉shell，依然会继续执行。</p>
+<p><code>&amp;</code>和<code>nohub</code>的区别和常见使用场景
+<code>&amp;</code>代表后台执行，免疫SIGINT信号（<code>Ctrl+C</code>），但是不免疫SIGHUP信号（关闭shell）；<code>nohub</code>相反，关闭shell仍会执行，但是<code>Ctrl+C</code>可以中断执行。因此可以将这两个联合使用，让进程既不受<code>Ctrl+C</code>影响，也不受shell关闭影响，类似守护进程。</p>
+<h2 id="13-多窗口管理">13. 多窗口管理</h2>
+<p>一种方式是用nhup，还有一种是<a href="https://www.ruanyifeng.com/blog/2019/10/tmux.html">tmux</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/102546608">一文助你打通 tmux</a></p>
+<h3 id="131-新建会话和列出会话">13.1. 新建会话和列出会话</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ tmux
+</span></span><span class="line"><span class="cl">$ tmux new -s &lt;session-name&gt;
+</span></span><span class="line"><span class="cl">$ tmux ls
+</span></span></code></pre></div><h3 id="132-切换会话">13.2. 切换会话</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 使用会话编号</span>
+</span></span><span class="line"><span class="cl">$ tmux switch -t <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 使用会话名称</span>
+</span></span><span class="line"><span class="cl">$ tmux switch -t &lt;session-name&gt;
+</span></span></code></pre></div><h3 id="133-杀掉会话">13.3. 杀掉会话</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 使用会话编号</span>
+</span></span><span class="line"><span class="cl">$ tmux kill-session -t <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 使用会话名称</span>
+</span></span><span class="line"><span class="cl">$ tmux kill-session -t &lt;session-name&gt;
+</span></span><span class="line"><span class="cl"><span class="c1"># 或者在session里面按ctrl+d</span>
+</span></span><span class="line"><span class="cl">ctrl + d
+</span></span></code></pre></div><h3 id="133-退出会话和再次进入">13.3. 退出会话和再次进入</h3>
+<p><code>ctrl + b, d</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ tmux a -t session_name_or_id
+</span></span></code></pre></div><h3 id="134-新建窗口">13.4. 新建窗口</h3>
+<p><code>ctrl + b, % 或者 &quot;</code></p>
+<h3 id="135-切换窗口">13.5. 切换窗口</h3>
+<p><code>ctrl + b, 光标</code></p>
+<h3 id="136-关闭窗口">13.6. 关闭窗口</h3>
+<p><code>ctrl + b, x</code></p>
+<h3 id="137-调节窗口大小">13.7. 调节窗口大小</h3>
+<p><code>ctrl + b, ctrl + 光标</code></p>
+
+  </div>
+
+  <footer class="post-footer">
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    
+    
+    <div><span> <a href="">Yuquan</a> 
+        , 2019 - 2023,  Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> 
+    </span></div>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = 'copy';
+
+        function copyingDone() {
+            copybutton.innerText = 'copied!';
+            setTimeout(() => {
+                copybutton.innerText = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

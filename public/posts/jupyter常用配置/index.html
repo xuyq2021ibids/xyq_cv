@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>jupyter常用配置 | Yuquan</title>
+<meta name="keywords" content="" />
+<meta name="description" content="jupyter的常用配置
+有时候没法用pycharm，有需要交互的调参，就需要jupyter配置一下。 我一般习惯于用jupyterlab
+1. jupyter-lab安装包 conda create -n YOUR_ENVIRONMENT python pandas seaborn xgboost
+conda install jupyterlab -c conda-forge
+2. python版本的ggplot安装包 conda install plotnine -c conda-forge
+3. jupyterlab-lsp自动补全代码的官方建议 conda install -c conda-forge &#39;jupyterlab&gt;=3.0.0,&lt;4.0.0a0&#39; jupyterlab-lsp
+conda install -c conda-forge python-lsp-server r-languageserver
+由于已经安过了jupyterlab，也不需要r的服务，直接用下面这个命令就行
+conda install -c conda-forge jupyterlab-lsp python-lsp-server
+4. jupyterlab-code-formatter代码自动格式化 还有一个自动formatter的服务，自动格式化jupyter的服务 conda install -c conda-forge jupyterlab_code_ormatter 老装不上(注意下划线和破折号的区别)
+先装一个balck和isort用conda，再用pip装jupyterlab-code-formatter 这两个瓜皮（balck和isort）都不熟悉，还是用autopep8好了 尽量避免conda和pip混用
+装好autopep8之后去jupyterlab的setting里把jupyterlab-code-formatter的默认引擎换成autopep8
+最后重启jupyterlab服务，而不是内核
+jupyterlab添加或删除内核 切换到要添加的环境，确认已安装ipykernel python -m ipykernel --version 如果没有安装，则安装：conda install ipykernel jupyter安装内核（kernel） python -m ipykernel install --user --name=xxx --display-name &quot;在notebook中显示的环境名&quot; xxx是你的虚拟环境名称 查看jupyter notebook kernel jupyter kernelspec list jupyter删除内核 jupyter kernelspec remove kernelname kernelname是你的虚拟环境名称（即上面添加的内核名称） ">
+<meta name="author" content="Yuquan">
+<link rel="canonical" href="/posts/jupyter%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.29f8ec3d41bdc6b8c6285e3876c53f7692399e65b1e548daa88820758769e662.css" integrity="sha256-KfjsPUG9xrjGKF44dsU/dpI5nmWx5UjaqIggdYdp5mI=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.f31140db67161625dbdecd790d867c07e4599ecbd77dc7e79a788c294e4bbbf2.js" integrity="sha256-8xFA22cWFiXb3s15DYZ8B&#43;RZnsvXfcfnmniMKU5Lu/I="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="/images/ghost-2.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/ghost-2.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/ghost-2.png">
+<link rel="apple-touch-icon" href="/images/ghost-2.png">
+<link rel="mask-icon" href="/images/ghost-2.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="" accesskey="h" title="Yuquan (Alt + H)">Yuquan</a>
+            <span class="logo-switches">
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="/" title="Home"><span>HOME</span></a>
+            </li>
+            <li>
+                <a href="/pubs/" title="RESEARCH">
+                    <span>RESEARCH</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/" title="ABOUT">
+                    <span>ABOUT</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="">Home</a>&nbsp;»&nbsp;<a href="/posts/">Posts</a></div>
+    <h1 class="post-title">
+      jupyter常用配置
+    </h1>
+  </header> 
+  <div class="post-content">
+<p>jupyter的常用配置</p>
+<p>有时候没法用pycharm，有需要交互的调参，就需要jupyter配置一下。
+我一般习惯于用jupyterlab</p>
+<h2 id="1-jupyter-lab安装包">1. jupyter-lab安装包</h2>
+<p><code>conda create -n YOUR_ENVIRONMENT python pandas seaborn xgboost</code></p>
+<p><code>conda install jupyterlab -c conda-forge</code></p>
+<h2 id="2-python版本的ggplot安装包">2. python版本的ggplot安装包</h2>
+<p><code>conda install plotnine -c conda-forge</code></p>
+<h2 id="3-jupyterlab-lsp自动补全代码的官方建议">3. jupyterlab-lsp自动补全代码的官方建议</h2>
+<ul>
+<li>
+<p><code>conda install -c conda-forge 'jupyterlab&gt;=3.0.0,&lt;4.0.0a0' jupyterlab-lsp</code></p>
+</li>
+<li>
+<p><code>conda install -c conda-forge python-lsp-server r-languageserver</code></p>
+</li>
+</ul>
+<p>由于已经安过了jupyterlab，也不需要r的服务，直接用下面这个命令就行<br>
+<code>conda install -c conda-forge jupyterlab-lsp python-lsp-server</code></p>
+<h2 id="4-jupyterlab-code-formatter代码自动格式化">4. jupyterlab-code-formatter代码自动格式化</h2>
+<p>还有一个自动formatter的服务，自动格式化jupyter的服务
+<code>conda install -c conda-forge jupyterlab_code_ormatter</code>
+老装不上(<strong>注意下划线和破折号的区别</strong>)</p>
+<p>先装一个<code>balck</code>和<code>isort</code>用<code>conda</code>，再用<code>pip</code>装<code>jupyterlab-code-formatter</code>
+这两个瓜皮（<code>balck</code>和<code>isort</code>）都不熟悉，还是用<code>autopep8</code>好了
+尽量避免conda和pip混用</p>
+<p>装好autopep8之后去jupyterlab的setting里把<code>jupyterlab-code-formatter</code>的默认引擎换成autopep8</p>
+<p>最后重启jupyterlab服务，而不是内核</p>
+<h2 id="jupyterlab添加或删除内核">jupyterlab添加或删除内核</h2>
+<ul>
+<li>切换到要添加的环境，确认已安装ipykernel
+<ul>
+<li><code>python -m ipykernel --version</code></li>
+<li>如果没有安装，则安装：<code>conda install ipykernel</code></li>
+</ul>
+</li>
+<li>jupyter安装内核（kernel）
+<ul>
+<li><code>python -m ipykernel install --user --name=xxx --display-name &quot;在notebook中显示的环境名&quot;</code> xxx是你的虚拟环境名称</li>
+</ul>
+</li>
+<li>查看jupyter notebook kernel
+<ul>
+<li>jupyter kernelspec list</li>
+</ul>
+</li>
+<li>jupyter删除内核
+<ul>
+<li><code>jupyter kernelspec remove kernelname</code> kernelname是你的虚拟环境名称（即上面添加的内核名称）</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+
+  <footer class="post-footer">
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    
+    
+    <div><span> <a href="">Yuquan</a> 
+        , 2019 - 2023,  Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> 
+    </span></div>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = 'copy';
+
+        function copyingDone() {
+            copybutton.innerText = 'copied!';
+            setTimeout(() => {
+                copybutton.innerText = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

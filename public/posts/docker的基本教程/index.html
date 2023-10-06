@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>docker的基本教程 | Yuquan</title>
+<meta name="keywords" content="" />
+<meta name="description" content="参考链接：https://zhuanlan.zhihu.com/p/143156163
+1. 安装docker # 首先安装 Docker yum -y install docker dok # 然后启动 Docker 服务 service docker start # 测试安装是否成功 docker -v # 配置阿里云镜像加速 sudo mkdir -p /etc/docker sudo tee /etc/docker/daemon.json &lt;&lt;-&#39;EOF&#39; { &#34;registry-mirrors&#34;: [&#34;https://******.mirror.aliyuncs.com&#34;] } EOF sudo systemctl daemon-reload sudo systemctl restart docker 2. 拉取centos镜像 docker pull centos:centos7 3. 启动容器 docker run -itd --name=x1 centos:centos7 /bin/bash docker rename 原容器名称 新容器名称 4. 本项目用到的dockerfile FROM docker.io/library/centos:centos7 MAINTAINER xyq xyq@qq.comRUN yum install wget -yRUN wget https://mirrors.">
+<meta name="author" content="Yuquan">
+<link rel="canonical" href="/posts/docker%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%95%99%E7%A8%8B/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.29f8ec3d41bdc6b8c6285e3876c53f7692399e65b1e548daa88820758769e662.css" integrity="sha256-KfjsPUG9xrjGKF44dsU/dpI5nmWx5UjaqIggdYdp5mI=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.f31140db67161625dbdecd790d867c07e4599ecbd77dc7e79a788c294e4bbbf2.js" integrity="sha256-8xFA22cWFiXb3s15DYZ8B&#43;RZnsvXfcfnmniMKU5Lu/I="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="/images/ghost-2.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/ghost-2.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/ghost-2.png">
+<link rel="apple-touch-icon" href="/images/ghost-2.png">
+<link rel="mask-icon" href="/images/ghost-2.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="" accesskey="h" title="Yuquan (Alt + H)">Yuquan</a>
+            <span class="logo-switches">
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="/" title="Home"><span>HOME</span></a>
+            </li>
+            <li>
+                <a href="/pubs/" title="RESEARCH">
+                    <span>RESEARCH</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/" title="ABOUT">
+                    <span>ABOUT</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="">Home</a>&nbsp;»&nbsp;<a href="/posts/">Posts</a></div>
+    <h1 class="post-title">
+      docker的基本教程
+    </h1>
+  </header> 
+  <div class="post-content">
+<p>参考链接：https://zhuanlan.zhihu.com/p/143156163</p>
+<h1 id="1-安装docker">1. 安装docker</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 首先安装 Docker</span>
+</span></span><span class="line"><span class="cl">yum -y install docker
+</span></span><span class="line"><span class="cl">dok 
+</span></span><span class="line"><span class="cl"><span class="c1"># 然后启动 Docker 服务</span>
+</span></span><span class="line"><span class="cl">service docker start
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 测试安装是否成功</span>
+</span></span><span class="line"><span class="cl">docker -v
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 配置阿里云镜像加速</span>
+</span></span><span class="line"><span class="cl">sudo mkdir -p /etc/docker
+</span></span><span class="line"><span class="cl">sudo tee /etc/docker/daemon.json <span class="s">&lt;&lt;-&#39;EOF&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s">{
+</span></span></span><span class="line"><span class="cl"><span class="s">  &#34;registry-mirrors&#34;: [&#34;https://******.mirror.aliyuncs.com&#34;]
+</span></span></span><span class="line"><span class="cl"><span class="s">}
+</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
+</span></span><span class="line"><span class="cl">sudo systemctl daemon-reload
+</span></span><span class="line"><span class="cl">sudo systemctl restart docker
+</span></span></code></pre></div><h1 id="2-拉取centos镜像">2. 拉取centos镜像</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker pull centos:centos7
+</span></span></code></pre></div><h1 id="3-启动容器">3. 启动容器</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run -itd --name<span class="o">=</span>x1 centos:centos7 /bin/bash 
+</span></span><span class="line"><span class="cl">docker rename 原容器名称 新容器名称
+</span></span></code></pre></div><h1 id="4-本项目用到的dockerfile">4. 本项目用到的dockerfile</h1>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<pre tabindex="0"><code>FROM  docker.io/library/centos:centos7 
+
+MAINTAINER xyq xyq@qq.com
+
+RUN yum install wget -y
+RUN wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-py39_23.5.0-3-Linux-x86_64.sh --no-check-certificate
+RUN bash Miniconda3-py39_23.5.0-3-Linux-x86_64.sh -b
+RUN /root/miniconda3/bin/conda init
+RUN source ~/.bashrc
+RUN /root/miniconda3/bin/conda config --add channels defaults
+RUN /root/miniconda3/bin/conda config --set show_channel_urls True
+RUN /root/miniconda3/bin/conda config --add default_channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+RUN /root/miniconda3/bin/conda config --add default_channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+RUN /root/miniconda3/bin/conda config --add default_channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+RUN /root/miniconda3/bin/conda config --add default_channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+RUN echo -e &#34;custom_channels:\n  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud\n  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud\n  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud\n  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud\n  pytorch-lts: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud\n  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud\n  deepmodeling: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/&#34; &gt;&gt; ~/.condarc
+RUN /root/miniconda3/bin/conda install -c conda-forge kafka-python xgboost pandas -y 
+RUN /root/miniconda3/bin/pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+RUN /root/miniconda3/bin/pip install redis==4.6.0 lz4
+
+COPY /app .
+</code></pre><h1 id="5-构建镜像">5. 构建镜像</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker build -t xyq:centos7 .
+</span></span></code></pre></div><h1 id="6-暂时退出容器和宿主机交换文件">6. 暂时退出容器和宿主机交换文件</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run -it -v /home/haha/下载:/root microsoft/dotnet:latest /bin/bash
+</span></span></code></pre></div><h1 id="7-暂时退出容器">7. 暂时退出容器</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Ctrl+P+Q</span>
+</span></span><span class="line"><span class="cl"><span class="nb">exit</span> <span class="c1"># 前提是启动时加了-d参数让其后台运行</span>
+</span></span></code></pre></div><h1 id="8-再次进入容器">8. 再次进入容器</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker <span class="nb">exec</span> -it db3 /bin/bash <span class="c1"># 或者</span>
+</span></span></code></pre></div><h1 id="9-关闭容器">9. 关闭容器</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">exit</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Ctrl+D</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Ctrl+P,Q</span>
+</span></span><span class="line"><span class="cl">docker stop 容器名/id
+</span></span></code></pre></div><h1 id="10-导出容器成镜像">10. 导出容器成镜像</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker commit -m <span class="s2">&#34;改动信息&#34;</span> -a <span class="s2">&#34;作者信息&#34;</span> <span class="o">[</span>container_id<span class="o">]</span> <span class="o">[</span>new_image:tag<span class="o">]</span>
+</span></span></code></pre></div><h1 id="11-镜像保存">11. 镜像保存</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker save -o 将要保存到本地的文件名 要保存的镜像
+</span></span></code></pre></div><h1 id="12-上传镜像">12. 上传镜像</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker login -u cn-south-1@E23KOIFVFVAJD -p f371b92a43cb5048f21bc9e8d06b1fa767 swr.cn-south-1.myhuaweicloud.com
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo docker tag <span class="o">[{</span>镜像名称<span class="o">}</span>:<span class="o">{</span>版本名称<span class="o">}]</span> swr.cn-south-1.myhuaweicloud.com/<span class="o">{</span>组织名称<span class="o">}</span>/<span class="o">{</span>镜像名称<span class="o">}</span>:<span class="o">{</span>版本名称<span class="o">}</span>
+</span></span><span class="line"><span class="cl">sudo docker push swr.cn-south-1.myhuaweicloud.com/<span class="o">{</span>组织名称<span class="o">}</span>/<span class="o">{</span>镜像名称<span class="o">}</span>:<span class="o">{</span>版本名称<span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo docker tag xyq:k8s_demo1 swr.cn-south-1.myhuaweicloud.com/bigdata/xyq:k8s_demo1
+</span></span><span class="line"><span class="cl">sudo docker push swr.cn-south-1.myhuaweicloud.com/bigdata/xyq:k8s_demo1
+</span></span></code></pre></div><h1 id="13-其他可能用得到的命令">13. 其他可能用得到的命令</h1>
+<h2 id="131-容器的基本操作">13.1. 容器的基本操作</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#查看正在运行容器</span>
+</span></span><span class="line"><span class="cl">docker ps
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#查看所有容器</span>
+</span></span><span class="line"><span class="cl">docker ps -a
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#查看最新创建的容器</span>
+</span></span><span class="line"><span class="cl">docker ps -l
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 创建容器</span>
+</span></span><span class="line"><span class="cl">docker create 镜像
+</span></span><span class="line"><span class="cl">	<span class="c1"># --创建一个 nginx 容器：docker create nginx</span>
+</span></span><span class="line"><span class="cl">	<span class="c1"># --指定容器的name为nginx：docker create --name=nginx nginx</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 创建并启动一个容器</span>
+</span></span><span class="line"><span class="cl">docker run 镜像	--docker run --name nginx1 -d -p 8080:80 nginx
+</span></span><span class="line"><span class="cl"><span class="c1"># --name 含义和上文一样，表示创建的容器的名字，-d 表示容器在后台运行，-p 表示将容器的 80 端口映射到宿主机的 8080 端口</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 临时退出容器可以使用会计见Ctrl+P+Q</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 进入一个容器</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 1:使用docker attach命令</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 我们使用</span>
+</span></span><span class="line"><span class="cl">docker attach db3 或者 docker attach d48b21a7e439
+</span></span><span class="line"><span class="cl">    <span class="c1"># db3是后台容器的NAMES,d48b21a7e439是容器的进程ID  CONTAINER ID</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 然后就进去了这个容器的ssh界面。</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 但是它有一个缺点，只要这个连接终止，或者使用了exit命令，容器就会退出后台运行</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 2:使用docker exec命令</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 这个命令使用exit命令后，不会退出后台，一般使用这个命令，使用方法如下</span>
+</span></span><span class="line"><span class="cl">docker <span class="nb">exec</span> -it db3 /bin/sh <span class="c1"># 或者</span>
+</span></span><span class="line"><span class="cl">docker <span class="nb">exec</span> -it d48b21a7e439 /bin/bash
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#启动容器</span>
+</span></span><span class="line"><span class="cl">docker start id<span class="p">|</span>name
+</span></span><span class="line"><span class="cl"><span class="c1">#重启容器</span>
+</span></span><span class="line"><span class="cl">docker restart id<span class="p">|</span>name
+</span></span><span class="line"><span class="cl"><span class="c1">#关闭容器</span>
+</span></span><span class="line"><span class="cl">docker stop id<span class="p">|</span>name
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#单个删除</span>
+</span></span><span class="line"><span class="cl">docker rm id<span class="p">|</span>name
+</span></span><span class="line"><span class="cl"><span class="c1">#批量删除</span>
+</span></span><span class="line"><span class="cl">docker rm <span class="k">$(</span>docker ps -a -q<span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#容器详情</span>
+</span></span><span class="line"><span class="cl">docker inspect id<span class="p">|</span>name
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#查看容器进程</span>
+</span></span><span class="line"><span class="cl">docker top 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c1">#查看你容器日记</span>
+</span></span><span class="line"><span class="cl">docker logs id<span class="p">|</span>name
+</span></span><span class="line"><span class="cl">		<span class="c1"># -f ：实时日记</span>
+</span></span><span class="line"><span class="cl">		<span class="c1"># -t : 显示时间</span>
+</span></span><span class="line"><span class="cl">		<span class="c1"># -tail： 控制输出行数</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#导出一个已经创建的容器导到一个文件</span>
+</span></span><span class="line"><span class="cl">docker <span class="nb">export</span> -o 文件名.tar 容器id
+</span></span><span class="line"><span class="cl"><span class="c1">#将文件导入为镜像</span>
+</span></span><span class="line"><span class="cl">docker import 文件名.tar 镜像名:镜像标签
+</span></span></code></pre></div><h2 id="132-镜像的基本操作">13.2. 镜像的基本操作</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 查看所有镜像</span>
+</span></span><span class="line"><span class="cl">docker images
+</span></span><span class="line"><span class="cl"><span class="c1"># 搜索镜像</span>
+</span></span><span class="line"><span class="cl">docker search name
+</span></span><span class="line"><span class="cl"><span class="c1"># 下载镜像</span>
+</span></span><span class="line"><span class="cl">docker pull name:版本
+</span></span><span class="line"><span class="cl"><span class="c1"># 版本可以在Docker hub上查看 </span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 删除镜像</span>
+</span></span><span class="line"><span class="cl">docker rmi id<span class="p">|</span>name
+</span></span></code></pre></div><h2 id="133-dockerfile的编写">13.3. Dockerfile的编写</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">FROM 		<span class="c1">#基础镜像，一切从这里开始构建</span>
+</span></span><span class="line"><span class="cl">MAINTAINER	<span class="c1">#镜像是谁写的，姓名+邮箱</span>
+</span></span><span class="line"><span class="cl">RUN			<span class="c1">#镜像构建时需要运行的命令</span>
+</span></span><span class="line"><span class="cl">ADD			<span class="c1">#步骤，tomcat镜像，这个tomcat压缩包；添加内容</span>
+</span></span><span class="line"><span class="cl">WORKDIR		<span class="c1">#镜像工作目录</span>
+</span></span><span class="line"><span class="cl">VOLUME		<span class="c1">#挂载的目录</span>
+</span></span><span class="line"><span class="cl">EXPOSE		<span class="c1">#暴露端口配置</span>
+</span></span><span class="line"><span class="cl">CMD			<span class="c1">#指定这个容器启动的时候要运行的命令,只有最后一个会生效，可被替代</span>
+</span></span><span class="line"><span class="cl">ENTRYPOINT	<span class="c1">#指定这个容器启动的时候要运行的命令，可以追加命令</span>
+</span></span><span class="line"><span class="cl">ONBUILD		<span class="c1">#当构建一个被继承DockerFile 这个时候就会运行 ONBUILD 的指令，触发指令</span>
+</span></span><span class="line"><span class="cl">COPY		<span class="c1">#类似ADD,将我们的文件拷贝至镜像中</span>
+</span></span><span class="line"><span class="cl">ENV			<span class="c1">#构建的时候设置环境变量</span>
+</span></span></code></pre></div><p>权限不够把自己加到docker里就不用每次都加sudo来执行docker命令了.</p>
+<p>可以该/etc/group文件,也可以用<code>adduser XXX docker</code>命令</p>
+
+  </div>
+
+  <footer class="post-footer">
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    
+    
+    <div><span> <a href="">Yuquan</a> 
+        , 2019 - 2023,  Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> 
+    </span></div>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = 'copy';
+
+        function copyingDone() {
+            copybutton.innerText = 'copied!';
+            setTimeout(() => {
+                copybutton.innerText = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

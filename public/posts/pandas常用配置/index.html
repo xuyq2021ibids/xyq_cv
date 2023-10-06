@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>pandas常用配置 | Yuquan</title>
+<meta name="keywords" content="" />
+<meta name="description" content="pd.get_option(&#39;display.max_columns&#39;) # 拿到XXX参数 pd.set_option(&#39;display.max_rows&#39;,xxx) # 最大行数 pd.set_option(&#39;display.min_rows&#39;,xxx) # 最小显示行数 pd.set_option(&#39;display.max_columns&#39;,xxx) # 最大显示列数 pd.set_option (&#39;display.max_colwidth&#39;,xxx) #最大列字符数 pd.set_option( &#39;display.precision&#39;,2) # 浮点型精度 pd.set_option(&#39;display.float_format&#39;,&#39;{:,}&#39;.format) #逗号分隔数字 pd.set_option(&#39;display.float_format&#39;, &#39;{:,.2f}&#39;.format) #设置浮点精度 pd.set_option(&#39;display.float_format&#39;, &#39;{:.2f}%&#39;.format) #百分号格式化 pd.set_option(&#39;plotting.backend&#39;, &#39;altair&#39;) # 更改后端绘图方式 pd.set_option(&#39;display.max_info_columns&#39;, 200) # info输出最大列数 pd.set_option(&#39;display.max_info_rows&#39;, 5) # info计数null时的阈值 pd.describe_option() #展示所有设置和描述 pd.reset_option(&#39;all&#39;) #重置所有设置选项 ">
+<meta name="author" content="Yuquan">
+<link rel="canonical" href="/posts/pandas%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.29f8ec3d41bdc6b8c6285e3876c53f7692399e65b1e548daa88820758769e662.css" integrity="sha256-KfjsPUG9xrjGKF44dsU/dpI5nmWx5UjaqIggdYdp5mI=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.f31140db67161625dbdecd790d867c07e4599ecbd77dc7e79a788c294e4bbbf2.js" integrity="sha256-8xFA22cWFiXb3s15DYZ8B&#43;RZnsvXfcfnmniMKU5Lu/I="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="/images/ghost-2.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/ghost-2.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/ghost-2.png">
+<link rel="apple-touch-icon" href="/images/ghost-2.png">
+<link rel="mask-icon" href="/images/ghost-2.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="" accesskey="h" title="Yuquan (Alt + H)">Yuquan</a>
+            <span class="logo-switches">
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="/" title="Home"><span>HOME</span></a>
+            </li>
+            <li>
+                <a href="/pubs/" title="RESEARCH">
+                    <span>RESEARCH</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/" title="ABOUT">
+                    <span>ABOUT</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="">Home</a>&nbsp;»&nbsp;<a href="/posts/">Posts</a></div>
+    <h1 class="post-title">
+      pandas常用配置
+    </h1>
+  </header> 
+  <div class="post-content">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">get_option</span><span class="p">(</span><span class="s1">&#39;display.max_columns&#39;</span><span class="p">)</span>  <span class="c1"># 拿到XXX参数</span>
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_rows&#39;</span><span class="p">,</span><span class="n">xxx</span><span class="p">)</span> <span class="c1"># 最大行数</span>
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.min_rows&#39;</span><span class="p">,</span><span class="n">xxx</span><span class="p">)</span> <span class="c1"># 最小显示行数</span>
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_columns&#39;</span><span class="p">,</span><span class="n">xxx</span><span class="p">)</span> <span class="c1"># 最大显示列数</span>
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span> <span class="p">(</span><span class="s1">&#39;display.max_colwidth&#39;</span><span class="p">,</span><span class="n">xxx</span><span class="p">)</span> <span class="c1">#最大列字符数</span>
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span> <span class="s1">&#39;display.precision&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># 浮点型精度</span>
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.float_format&#39;</span><span class="p">,</span><span class="s1">&#39;</span><span class="si">{:,}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">)</span> <span class="c1">#逗号分隔数字</span>
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.float_format&#39;</span><span class="p">,</span>  <span class="s1">&#39;</span><span class="si">{:,.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">)</span> <span class="c1">#设置浮点精度</span>
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.float_format&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{:.2f}</span><span class="s1">%&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">)</span> <span class="c1">#百分号格式化</span>
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;plotting.backend&#39;</span><span class="p">,</span> <span class="s1">&#39;altair&#39;</span><span class="p">)</span> <span class="c1"># 更改后端绘图方式</span>
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_info_columns&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span> <span class="c1"># info输出最大列数</span>
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_info_rows&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="c1"># info计数null时的阈值</span>
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">describe_option</span><span class="p">()</span> <span class="c1">#展示所有设置和描述</span>
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">reset_option</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span> <span class="c1">#重置所有设置选项</span>
+</span></span></code></pre></div>
+  </div>
+
+  <footer class="post-footer">
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    
+    
+    <div><span> <a href="">Yuquan</a> 
+        , 2019 - 2023,  Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> 
+    </span></div>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = 'copy';
+
+        function copyingDone() {
+            copybutton.innerText = 'copied!';
+            setTimeout(() => {
+                copybutton.innerText = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>ggplot绘图模板 | Yuquan</title>
+<meta name="keywords" content="" />
+<meta name="description" content="设置语言
+Sys.setlocale(&#34;LC_ALL&#34;,&#34;US&#34;) 设置字体，清晰度，尺寸。
+目前是一个非常合适的方图，如果图比较宽，把width double一下即可
+library(ggplot2) library(ggalluvial) # =============使用windowsFonts()查看字体别名============= windowsFonts() # &gt; windowsFonts() # $serif # [1] &#34;TT Times New Roman&#34; # # $sans # [1] &#34;TT Arial&#34; # # $mono # [1] &#34;TT Courier New&#34; # =============带字体的桑基图============= titanic_wide &lt;- data.frame(Titanic) ggplot(data = titanic_wide, aes(axis1 = Class, axis2 = Sex, axis3 = Age, y = Freq)) &#43; scale_x_discrete(limits = c(&#34;Class&#34;, &#34;Sex&#34;, &#34;Age&#34;), expand = c(.2, .05)) &#43; xlab(&#34;Demographic&#34;) &#43; geom_alluvium(aes(fill = Survived)) &#43; geom_stratum() &#43; geom_text(stat = &#34;stratum&#34;, aes(label = after_stat(stratum))) &#43; theme_minimal() &#43; ggtitle(&#34;passengers on the maiden voyage of the Titanic&#34;, &#34;stratified by demographics and survival&#34;)&#43; theme_bw()&#43; theme(text=element_text(size=16, # family=&#34;mono&#34; # family=&#34;sans&#34; family=&#34;serif&#34; )) # =============输出符合大小的图============= ggsave(&#34;.">
+<meta name="author" content="Yuquan">
+<link rel="canonical" href="/posts/ggplot%E7%BB%98%E5%9B%BE%E6%A8%A1%E6%9D%BF/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.29f8ec3d41bdc6b8c6285e3876c53f7692399e65b1e548daa88820758769e662.css" integrity="sha256-KfjsPUG9xrjGKF44dsU/dpI5nmWx5UjaqIggdYdp5mI=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.f31140db67161625dbdecd790d867c07e4599ecbd77dc7e79a788c294e4bbbf2.js" integrity="sha256-8xFA22cWFiXb3s15DYZ8B&#43;RZnsvXfcfnmniMKU5Lu/I="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="/images/ghost-2.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/ghost-2.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/ghost-2.png">
+<link rel="apple-touch-icon" href="/images/ghost-2.png">
+<link rel="mask-icon" href="/images/ghost-2.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="" accesskey="h" title="Yuquan (Alt + H)">Yuquan</a>
+            <span class="logo-switches">
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="/" title="Home"><span>HOME</span></a>
+            </li>
+            <li>
+                <a href="/pubs/" title="RESEARCH">
+                    <span>RESEARCH</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/" title="ABOUT">
+                    <span>ABOUT</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="">Home</a>&nbsp;»&nbsp;<a href="/posts/">Posts</a></div>
+    <h1 class="post-title">
+      ggplot绘图模板
+    </h1>
+  </header> 
+  <div class="post-content">
+<p>设置语言</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">Sys.setlocale</span><span class="p">(</span><span class="s">&#34;LC_ALL&#34;</span><span class="p">,</span><span class="s">&#34;US&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>设置字体，清晰度，尺寸。</p>
+<p>目前是一个非常合适的方图，如果图比较宽，把<code>width</code> double一下即可</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">ggalluvial</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># =============使用windowsFonts()查看字体别名=============</span>
+</span></span><span class="line"><span class="cl"><span class="nf">windowsFonts</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># &gt; windowsFonts()</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># $serif</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># [1] &#34;TT Times New Roman&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># $sans</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># [1] &#34;TT Arial&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># $mono</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># [1] &#34;TT Courier New&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># =============带字体的桑基图=============</span>
+</span></span><span class="line"><span class="cl"><span class="n">titanic_wide</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">Titanic</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">titanic_wide</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">       <span class="nf">aes</span><span class="p">(</span><span class="n">axis1</span> <span class="o">=</span> <span class="n">Class</span><span class="p">,</span> <span class="n">axis2</span> <span class="o">=</span> <span class="n">Sex</span><span class="p">,</span> <span class="n">axis3</span> <span class="o">=</span> <span class="n">Age</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">           <span class="n">y</span> <span class="o">=</span> <span class="n">Freq</span><span class="p">))</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">scale_x_discrete</span><span class="p">(</span><span class="n">limits</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;Class&#34;</span><span class="p">,</span> <span class="s">&#34;Sex&#34;</span><span class="p">,</span> <span class="s">&#34;Age&#34;</span><span class="p">),</span> <span class="n">expand</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">.2</span><span class="p">,</span> <span class="m">.05</span><span class="p">))</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">xlab</span><span class="p">(</span><span class="s">&#34;Demographic&#34;</span><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_alluvium</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="n">Survived</span><span class="p">))</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_stratum</span><span class="p">()</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_text</span><span class="p">(</span><span class="n">stat</span> <span class="o">=</span> <span class="s">&#34;stratum&#34;</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="nf">after_stat</span><span class="p">(</span><span class="n">stratum</span><span class="p">)))</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme_minimal</span><span class="p">()</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">ggtitle</span><span class="p">(</span><span class="s">&#34;passengers on the maiden voyage of the Titanic&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="s">&#34;stratified by demographics and survival&#34;</span><span class="p">)</span><span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme_bw</span><span class="p">()</span><span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">16</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                          <span class="c1"># family=&#34;mono&#34;</span>
+</span></span><span class="line"><span class="cl">                          <span class="c1"># family=&#34;sans&#34;</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">family</span><span class="o">=</span><span class="s">&#34;serif&#34;</span>
+</span></span><span class="line"><span class="cl">                          <span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># =============输出符合大小的图=============</span>
+</span></span><span class="line"><span class="cl"><span class="nf">ggsave</span><span class="p">(</span><span class="s">&#34;./demo1.png&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">       <span class="n">plot</span> <span class="o">=</span> <span class="nf">last_plot</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">       <span class="n">device</span> <span class="o">=</span> <span class="s">&#34;png&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">       <span class="n">path</span> <span class="o">=</span> <span class="kc">NULL</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">       <span class="n">scale</span> <span class="o">=</span> <span class="m">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">       <span class="n">width</span> <span class="o">=</span> <span class="m">2000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">       <span class="n">height</span> <span class="o">=</span> <span class="m">1500</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">       <span class="n">units</span> <span class="o">=</span> <span class="s">&#34;px&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">       <span class="n">dpi</span> <span class="o">=</span> <span class="m">300</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">       <span class="n">limitsize</span> <span class="o">=</span> <span class="kc">TRUE</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div>
+  </div>
+
+  <footer class="post-footer">
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    
+    
+    <div><span> <a href="">Yuquan</a> 
+        , 2019 - 2023,  Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> 
+    </span></div>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = 'copy';
+
+        function copyingDone() {
+            copybutton.innerText = 'copied!';
+            setTimeout(() => {
+                copybutton.innerText = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
