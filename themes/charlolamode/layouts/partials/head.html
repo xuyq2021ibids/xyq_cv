@@ -82,6 +82,22 @@
 {{- end }}
 {{- end -}}
 
+<!-- https://raw.githubusercontent.com/xuyq2021ibids/xyq_cv/master/static/js/highlight.min.js -->
+
+<!-- {{- /* Highlight.js */}}
+{{- $isHLJSdisabled := (.Site.Params.assets.disableHLJS | default .Params.disableHLJS ) }}
+{{- if (and (eq .Kind "page") (ne .Layout "archives") (ne .Layout "search") (not $isHLJSdisabled)) }} -->
+    <!-- {{- if not .Site.Params.assets.disableFingerprinting }} -->
+        <!-- {{- $highlight := resources.Get "https://raw.githubusercontent.com/xuyq2021ibids/xyq_cv/master/static/js/highlight.min.js" | minify | fingerprint }} -->
+        <!-- {{- $highlight := slice (resources.Get "https://raw.githubusercontent.com/xuyq2021ibids/xyq_cv/master/static/js/highlight.min.js") | resources.Concat "assets/js/highlight.js" | minify | fingerprint }} -->
+        <!-- <script crossorigin="anonymous" src="https://raw.githubusercontent.com/xuyq2021ibids/xyq_cv/master/static/js/highlight.min.js"  onload="hljs.initHighlightingOnLoad();"></script> -->
+    <!-- {{- else }} -->
+        <!-- {{- $highlight := resources.Get "https://raw.githubusercontent.com/xuyq2021ibids/xyq_cv/master/static/js/highlight.min.js" | minify }} -->
+        <!-- <script crossorigin="anonymous" src="https://raw.githubusercontent.com/xuyq2021ibids/xyq_cv/master/static/js/highlight.min.js" onload="hljs.initHighlightingOnLoad();"></script> -->
+<!--         <script src="https://raw.githubusercontent.com/xuyq2021ibids/xyq_cv/master/static/js/highlight.min.js" ></script> -->
+    <!-- {{- end }} -->
+<!-- {{- end }} -->
+
 
 
 {{- /* Highlight.js */}}
